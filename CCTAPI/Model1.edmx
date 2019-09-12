@@ -1,0 +1,668 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ClientComplentTrackerModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="ClientComplentTrackerModelStoreContainer">
+          <EntitySet Name="ActionStatus" EntityType="ClientComplentTrackerModel.Store.ActionStatus" store:Type="Tables" store:Schema="dbo" store:Name="ActionStatus">
+            <DefiningQuery>SELECT 
+      [ActionStatus].[ActionStatusID] AS [ActionStatusID], 
+      [ActionStatus].[Status] AS [Status]
+      FROM [dbo].[ActionStatus] AS [ActionStatus]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Category" EntityType="ClientComplentTrackerModel.Store.Category" store:Type="Tables" store:Schema="dbo" store:Name="Category">
+            <DefiningQuery>SELECT 
+      [Category].[CategoryID] AS [CategoryID], 
+      [Category].[CategoryName] AS [CategoryName], 
+      [Category].[IsActive] AS [IsActive], 
+      [Category].[CreatedDate] AS [CreatedDate], 
+      [Category].[ModifiedDate] AS [ModifiedDate], 
+      [Category].[CreatedBy] AS [CreatedBy], 
+      [Category].[ModifiedBy] AS [ModifiedBy]
+      FROM [dbo].[Category] AS [Category]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Client" EntityType="ClientComplentTrackerModel.Store.Client" store:Type="Tables" store:Schema="dbo" store:Name="Client">
+            <DefiningQuery>SELECT 
+      [Client].[ClientID] AS [ClientID], 
+      [Client].[Clients] AS [Clients], 
+      [Client].[EmailID] AS [EmailID], 
+      [Client].[IsActive] AS [IsActive], 
+      [Client].[CreatedDate] AS [CreatedDate], 
+      [Client].[ModifiedDate] AS [ModifiedDate], 
+      [Client].[CreatedBy] AS [CreatedBy], 
+      [Client].[ModifiedBy] AS [ModifiedBy]
+      FROM [dbo].[Client] AS [Client]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Client_Login_Page" EntityType="ClientComplentTrackerModel.Store.Client_Login_Page" store:Type="Tables" store:Schema="dbo" store:Name="Client_Login_Page">
+            <DefiningQuery>SELECT 
+      [Client_Login_Page].[UserID] AS [UserID], 
+      [Client_Login_Page].[UserName] AS [UserName], 
+      [Client_Login_Page].[Password] AS [Password], 
+      [Client_Login_Page].[Full_Name] AS [Full_Name], 
+      [Client_Login_Page].[Role] AS [Role], 
+      [Client_Login_Page].[CreatedDate] AS [CreatedDate], 
+      [Client_Login_Page].[ModifiedDate] AS [ModifiedDate], 
+      [Client_Login_Page].[IsActive] AS [IsActive], 
+      [Client_Login_Page].[CreatedBy] AS [CreatedBy], 
+      [Client_Login_Page].[ModifiedBy] AS [ModifiedBy], 
+      [Client_Login_Page].[EmailID] AS [EmailID]
+      FROM [dbo].[Client_Login_Page] AS [Client_Login_Page]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Map_ClientName" EntityType="ClientComplentTrackerModel.Store.Map_ClientName" store:Type="Tables" store:Schema="dbo" store:Name="Map_ClientName">
+            <DefiningQuery>SELECT 
+      [Map_ClientName].[MappingID] AS [MappingID], 
+      [Map_ClientName].[UserID] AS [UserID], 
+      [Map_ClientName].[ClientName] AS [ClientName], 
+      [Map_ClientName].[IsActive] AS [IsActive], 
+      [Map_ClientName].[CreatedDate] AS [CreatedDate], 
+      [Map_ClientName].[CreatedBy] AS [CreatedBy], 
+      [Map_ClientName].[ModifiedDate] AS [ModifiedDate], 
+      [Map_ClientName].[ModifiedBy] AS [ModifiedBy]
+      FROM [dbo].[Map_ClientName] AS [Map_ClientName]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Map_Version_client" EntityType="ClientComplentTrackerModel.Store.Map_Version_client" store:Type="Tables" store:Schema="dbo" store:Name="Map_Version_client">
+            <DefiningQuery>SELECT 
+      [Map_Version_client].[MVCID] AS [MVCID], 
+      [Map_Version_client].[VersionId] AS [VersionId], 
+      [Map_Version_client].[ClientId] AS [ClientId], 
+      [Map_Version_client].[IsActive] AS [IsActive], 
+      [Map_Version_client].[CreatedDate] AS [CreatedDate], 
+      [Map_Version_client].[CreatedBy] AS [CreatedBy], 
+      [Map_Version_client].[ModifiedDate] AS [ModifiedDate], 
+      [Map_Version_client].[ModifiedBy] AS [ModifiedBy]
+      FROM [dbo].[Map_Version_client] AS [Map_Version_client]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Map_Version_Product" EntityType="ClientComplentTrackerModel.Store.Map_Version_Product" store:Type="Tables" store:Schema="dbo" store:Name="Map_Version_Product">
+            <DefiningQuery>SELECT 
+      [Map_Version_Product].[MVCID] AS [MVCID], 
+      [Map_Version_Product].[VersionId] AS [VersionId], 
+      [Map_Version_Product].[ProductId] AS [ProductId], 
+      [Map_Version_Product].[IsActive] AS [IsActive], 
+      [Map_Version_Product].[CreatedDate] AS [CreatedDate], 
+      [Map_Version_Product].[CreatedBy] AS [CreatedBy], 
+      [Map_Version_Product].[ModifiedDate] AS [ModifiedDate], 
+      [Map_Version_Product].[ModifiedBy] AS [ModifiedBy], 
+      [Map_Version_Product].[ReleaseDate] AS [ReleaseDate]
+      FROM [dbo].[Map_Version_Product] AS [Map_Version_Product]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="module" EntityType="ClientComplentTrackerModel.Store.module" store:Type="Tables" store:Schema="dbo" store:Name="module">
+            <DefiningQuery>SELECT 
+      [module].[Moduleid] AS [Moduleid], 
+      [module].[ModuleName] AS [ModuleName], 
+      [module].[IsActive] AS [IsActive]
+      FROM [dbo].[module] AS [module]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Priority" EntityType="ClientComplentTrackerModel.Store.Priority" store:Type="Tables" store:Schema="dbo" store:Name="Priority">
+            <DefiningQuery>SELECT 
+      [Priority].[PriorityID] AS [PriorityID], 
+      [Priority].[PriorityName] AS [PriorityName]
+      FROM [dbo].[Priority] AS [Priority]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="product" EntityType="ClientComplentTrackerModel.Store.product" store:Type="Tables" store:Schema="dbo" store:Name="product">
+            <DefiningQuery>SELECT 
+      [product].[ProductID] AS [ProductID], 
+      [product].[ProductName] AS [ProductName], 
+      [product].[IsActive] AS [IsActive]
+      FROM [dbo].[product] AS [product]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Severity" EntityType="ClientComplentTrackerModel.Store.Severity" store:Type="Tables" store:Schema="dbo" store:Name="Severity">
+            <DefiningQuery>SELECT 
+      [Severity].[SeverityID] AS [SeverityID], 
+      [Severity].[SeverityName] AS [SeverityName], 
+      [Severity].[IsActive] AS [IsActive]
+      FROM [dbo].[Severity] AS [Severity]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TestEnvironment" EntityType="ClientComplentTrackerModel.Store.TestEnvironment" store:Type="Tables" store:Schema="dbo" store:Name="TestEnvironment">
+            <DefiningQuery>SELECT 
+      [TestEnvironment].[TestEnvironmentID] AS [TestEnvironmentID], 
+      [TestEnvironment].[TestEnvironmentName] AS [TestEnvironmentName], 
+      [TestEnvironment].[IsActive] AS [IsActive]
+      FROM [dbo].[TestEnvironment] AS [TestEnvironment]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Typ" EntityType="ClientComplentTrackerModel.Store.Typ" store:Type="Tables" store:Schema="dbo" store:Name="Typ">
+            <DefiningQuery>SELECT 
+      [Typ].[TypeID] AS [TypeID], 
+      [Typ].[TypeName] AS [TypeName], 
+      [Typ].[IsActive] AS [IsActive]
+      FROM [dbo].[Typ] AS [Typ]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="UserRole" EntityType="ClientComplentTrackerModel.Store.UserRole" store:Type="Tables" store:Schema="dbo" store:Name="UserRole">
+            <DefiningQuery>SELECT 
+      [UserRole].[RoleID] AS [RoleID], 
+      [UserRole].[Role] AS [Role]
+      FROM [dbo].[UserRole] AS [UserRole]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ClientComplentTracker.dbo.ActionStatus' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="ActionStatus">
+          <Key>
+            <PropertyRef Name="ActionStatusID" />
+          </Key>
+          <Property Name="ActionStatusID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Status" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ClientComplentTracker.dbo.Category' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryName" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ClientComplentTracker.dbo.Client' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="ClientID" />
+          </Key>
+          <Property Name="ClientID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Clients" Type="nvarchar" MaxLength="100" />
+          <Property Name="EmailID" Type="nvarchar" MaxLength="3000" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ClientComplentTracker.dbo.Client_Login_Page' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Client_Login_Page">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+          <Property Name="Full_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Role" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="ModifiedBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="EmailID" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ClientComplentTracker.dbo.Map_ClientName' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Map_ClientName">
+          <Key>
+            <PropertyRef Name="MappingID" />
+          </Key>
+          <Property Name="MappingID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="ClientName" Type="int" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ClientComplentTracker.dbo.Map_Version_client' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Map_Version_client">
+          <Key>
+            <PropertyRef Name="MVCID" />
+          </Key>
+          <Property Name="MVCID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="VersionId" Type="int" />
+          <Property Name="ClientId" Type="int" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="numeric" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="numeric" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ClientComplentTracker.dbo.Map_Version_Product' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Map_Version_Product">
+          <Key>
+            <PropertyRef Name="MVCID" />
+          </Key>
+          <Property Name="MVCID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="VersionId" Type="int" />
+          <Property Name="ProductId" Type="int" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="numeric" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="numeric" />
+          <Property Name="ReleaseDate" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ClientComplentTracker.dbo.module' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="module">
+          <Key>
+            <PropertyRef Name="Moduleid" />
+          </Key>
+          <Property Name="Moduleid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ModuleName" Type="nvarchar" MaxLength="500" />
+          <Property Name="IsActive" Type="bit" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ClientComplentTracker.dbo.Priority' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Priority">
+          <Key>
+            <PropertyRef Name="PriorityID" />
+          </Key>
+          <Property Name="PriorityID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PriorityName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ClientComplentTracker.dbo.product' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="product">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="100" />
+          <Property Name="IsActive" Type="bit" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ClientComplentTracker.dbo.Severity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Severity">
+          <Key>
+            <PropertyRef Name="SeverityID" />
+          </Key>
+          <Property Name="SeverityID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SeverityName" Type="nvarchar" MaxLength="100" />
+          <Property Name="IsActive" Type="bit" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ClientComplentTracker.dbo.TestEnvironment' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="TestEnvironment">
+          <Key>
+            <PropertyRef Name="TestEnvironmentID" />
+          </Key>
+          <Property Name="TestEnvironmentID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TestEnvironmentName" Type="nvarchar" MaxLength="1000" />
+          <Property Name="IsActive" Type="bit" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ClientComplentTracker.dbo.Typ' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Typ">
+          <Key>
+            <PropertyRef Name="TypeID" />
+          </Key>
+          <Property Name="TypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TypeName" Type="nvarchar" MaxLength="100" />
+          <Property Name="IsActive" Type="bit" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ClientComplentTracker.dbo.UserRole' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Role" Type="varchar" MaxLength="50" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ClientComplentTrackerModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ClientComplentTrackerEntities1" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Categories" EntityType="ClientComplentTrackerModel.Category" />
+          <EntitySet Name="Client_Login_Page" EntityType="ClientComplentTrackerModel.Client_Login_Page" />
+          <EntitySet Name="modules" EntityType="ClientComplentTrackerModel.module" />
+          <EntitySet Name="products" EntityType="ClientComplentTrackerModel.product" />
+          <EntitySet Name="Severities" EntityType="ClientComplentTrackerModel.Severity" />
+          <EntitySet Name="Typs" EntityType="ClientComplentTrackerModel.Typ" />
+          <EntitySet Name="UserRoles" EntityType="ClientComplentTrackerModel.UserRole" />
+          <EntitySet Name="TestEnvironments" EntityType="ClientComplentTrackerModel.TestEnvironment" />
+          <EntitySet Name="Priorities" EntityType="ClientComplentTrackerModel.Priority" />
+          <EntitySet Name="Map_ClientName" EntityType="ClientComplentTrackerModel.Map_ClientName" />
+          <EntitySet Name="Map_Version_client" EntityType="ClientComplentTrackerModel.Map_Version_client" />
+          <EntitySet Name="Map_Version_Product" EntityType="ClientComplentTrackerModel.Map_Version_Product" />
+          <EntitySet Name="Clients" EntityType="ClientComplentTrackerModel.Client" />
+          <EntitySet Name="ActionStatus" EntityType="ClientComplentTrackerModel.ActionStatu" />
+        </EntityContainer>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Client_Login_Page">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Password" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Full_Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Role" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="CreatedBy" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="EmailID" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="module">
+          <Key>
+            <PropertyRef Name="Moduleid" />
+          </Key>
+          <Property Name="Moduleid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ModuleName" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="IsActive" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="product">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="IsActive" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Severity">
+          <Key>
+            <PropertyRef Name="SeverityID" />
+          </Key>
+          <Property Name="SeverityID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="SeverityName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="IsActive" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Typ">
+          <Key>
+            <PropertyRef Name="TypeID" />
+          </Key>
+          <Property Name="TypeID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="TypeName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="IsActive" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Role" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TestEnvironment">
+          <Key>
+            <PropertyRef Name="TestEnvironmentID" />
+          </Key>
+          <Property Type="Int32" Name="TestEnvironmentID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="TestEnvironmentName" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsActive" />
+        </EntityType>
+        <EntityType Name="Priority">
+          <Key>
+            <PropertyRef Name="PriorityID" />
+          </Key>
+          <Property Type="Int32" Name="PriorityID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="PriorityName" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Map_ClientName">
+          <Key>
+            <PropertyRef Name="MappingID" />
+          </Key>
+          <Property Type="Int32" Name="MappingID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="UserID" />
+          <Property Type="Int32" Name="ClientName" />
+          <Property Type="Boolean" Name="IsActive" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+          <Property Type="Int32" Name="CreatedBy" />
+          <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+          <Property Type="Int32" Name="ModifiedBy" />
+        </EntityType>
+        <EntityType Name="Map_Version_client">
+          <Key>
+            <PropertyRef Name="MVCID" />
+          </Key>
+          <Property Type="Int32" Name="MVCID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="VersionId" />
+          <Property Type="Int32" Name="ClientId" />
+          <Property Type="Boolean" Name="IsActive" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+          <Property Type="Decimal" Name="CreatedBy" Precision="18" Scale="0" />
+          <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+          <Property Type="Decimal" Name="ModifiedBy" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="Map_Version_Product">
+          <Key>
+            <PropertyRef Name="MVCID" />
+          </Key>
+          <Property Type="Int32" Name="MVCID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="VersionId" />
+          <Property Type="Int32" Name="ProductId" />
+          <Property Type="Boolean" Name="IsActive" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+          <Property Type="Decimal" Name="CreatedBy" Precision="18" Scale="0" />
+          <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+          <Property Type="Decimal" Name="ModifiedBy" Precision="18" Scale="0" />
+          <Property Type="String" Name="ReleaseDate" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="ClientID" />
+          </Key>
+          <Property Type="Int32" Name="ClientID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Clients" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EmailID" MaxLength="3000" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsActive" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+          <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+          <Property Type="String" Name="CreatedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ModifiedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ActionStatu">
+          <Key>
+            <PropertyRef Name="ActionStatusID" />
+          </Key>
+          <Property Type="Int32" Name="ActionStatusID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Status" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ClientComplentTrackerModelStoreContainer" CdmEntityContainer="ClientComplentTrackerEntities1">
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="ClientComplentTrackerModel.Category">
+              <MappingFragment StoreEntitySet="Category">
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Client_Login_Page">
+            <EntityTypeMapping TypeName="ClientComplentTrackerModel.Client_Login_Page">
+              <MappingFragment StoreEntitySet="Client_Login_Page">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Full_Name" ColumnName="Full_Name" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="modules">
+            <EntityTypeMapping TypeName="ClientComplentTrackerModel.module">
+              <MappingFragment StoreEntitySet="module">
+                <ScalarProperty Name="Moduleid" ColumnName="Moduleid" />
+                <ScalarProperty Name="ModuleName" ColumnName="ModuleName" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="products">
+            <EntityTypeMapping TypeName="ClientComplentTrackerModel.product">
+              <MappingFragment StoreEntitySet="product">
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Severities">
+            <EntityTypeMapping TypeName="ClientComplentTrackerModel.Severity">
+              <MappingFragment StoreEntitySet="Severity">
+                <ScalarProperty Name="SeverityID" ColumnName="SeverityID" />
+                <ScalarProperty Name="SeverityName" ColumnName="SeverityName" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Typs">
+            <EntityTypeMapping TypeName="ClientComplentTrackerModel.Typ">
+              <MappingFragment StoreEntitySet="Typ">
+                <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+                <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserRoles">
+            <EntityTypeMapping TypeName="ClientComplentTrackerModel.UserRole">
+              <MappingFragment StoreEntitySet="UserRole">
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TestEnvironments">
+            <EntityTypeMapping TypeName="ClientComplentTrackerModel.TestEnvironment">
+              <MappingFragment StoreEntitySet="TestEnvironment">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="TestEnvironmentName" ColumnName="TestEnvironmentName" />
+                <ScalarProperty Name="TestEnvironmentID" ColumnName="TestEnvironmentID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Priorities">
+            <EntityTypeMapping TypeName="ClientComplentTrackerModel.Priority">
+              <MappingFragment StoreEntitySet="Priority">
+                <ScalarProperty Name="PriorityName" ColumnName="PriorityName" />
+                <ScalarProperty Name="PriorityID" ColumnName="PriorityID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Map_ClientName">
+            <EntityTypeMapping TypeName="ClientComplentTrackerModel.Map_ClientName">
+              <MappingFragment StoreEntitySet="Map_ClientName">
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="MappingID" ColumnName="MappingID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Map_Version_client">
+            <EntityTypeMapping TypeName="ClientComplentTrackerModel.Map_Version_client">
+              <MappingFragment StoreEntitySet="Map_Version_client">
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+                <ScalarProperty Name="VersionId" ColumnName="VersionId" />
+                <ScalarProperty Name="MVCID" ColumnName="MVCID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Map_Version_Product">
+            <EntityTypeMapping TypeName="ClientComplentTrackerModel.Map_Version_Product">
+              <MappingFragment StoreEntitySet="Map_Version_Product">
+                <ScalarProperty Name="ReleaseDate" ColumnName="ReleaseDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="VersionId" ColumnName="VersionId" />
+                <ScalarProperty Name="MVCID" ColumnName="MVCID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Clients">
+            <EntityTypeMapping TypeName="ClientComplentTrackerModel.Client">
+              <MappingFragment StoreEntitySet="Client">
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+                <ScalarProperty Name="Clients" ColumnName="Clients" />
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ActionStatus">
+            <EntityTypeMapping TypeName="ClientComplentTrackerModel.ActionStatu">
+              <MappingFragment StoreEntitySet="ActionStatus">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ActionStatusID" ColumnName="ActionStatusID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

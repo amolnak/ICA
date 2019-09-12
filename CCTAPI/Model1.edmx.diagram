@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="12931b409b814ec1b52c12d05d7c4e0c" Name="Diagram1">
+        <EntityTypeShape EntityType="ClientComplentTrackerModel.Category" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClientComplentTrackerModel.Client_Login_Page" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClientComplentTrackerModel.module" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClientComplentTrackerModel.product" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClientComplentTrackerModel.Severity" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClientComplentTrackerModel.Typ" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClientComplentTrackerModel.UserRole" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClientComplentTrackerModel.TestEnvironment" Width="1.5" PointX="2.222310138038504" PointY="25.918960911184065" />
+        <EntityTypeShape EntityType="ClientComplentTrackerModel.Priority" Width="1.5" PointX="5.589001589263324" PointY="22.849117647320554" />
+        <EntityTypeShape EntityType="ClientComplentTrackerModel.Map_ClientName" Width="1.5" PointX="2.0232304772470289" PointY="24.708782982411229" />
+        <EntityTypeShape EntityType="ClientComplentTrackerModel.Map_Version_client" Width="1.5" PointX="5.178307148245306" PointY="28.919142736550022" />
+        <EntityTypeShape EntityType="ClientComplentTrackerModel.Map_Version_Product" Width="1.5" PointX="4.041963107903471" PointY="18.155852654090083" />
+        <EntityTypeShape EntityType="ClientComplentTrackerModel.Client" Width="1.5" PointX="0.83725694233423886" PointY="16.240894667916418" />
+        <EntityTypeShape EntityType="ClientComplentTrackerModel.ActionStatu" Width="1.5" PointX="9.8948152465256012" PointY="10.666778614123714" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

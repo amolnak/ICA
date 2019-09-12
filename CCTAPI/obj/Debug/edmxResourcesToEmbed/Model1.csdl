@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ClientComplentTrackerModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ClientComplentTrackerEntities1" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Categories" EntityType="ClientComplentTrackerModel.Category" />
+    <EntitySet Name="Client_Login_Page" EntityType="ClientComplentTrackerModel.Client_Login_Page" />
+    <EntitySet Name="modules" EntityType="ClientComplentTrackerModel.module" />
+    <EntitySet Name="products" EntityType="ClientComplentTrackerModel.product" />
+    <EntitySet Name="Severities" EntityType="ClientComplentTrackerModel.Severity" />
+    <EntitySet Name="Typs" EntityType="ClientComplentTrackerModel.Typ" />
+    <EntitySet Name="UserRoles" EntityType="ClientComplentTrackerModel.UserRole" />
+    <EntitySet Name="TestEnvironments" EntityType="ClientComplentTrackerModel.TestEnvironment" />
+    <EntitySet Name="Priorities" EntityType="ClientComplentTrackerModel.Priority" />
+    <EntitySet Name="Map_ClientName" EntityType="ClientComplentTrackerModel.Map_ClientName" />
+    <EntitySet Name="Map_Version_client" EntityType="ClientComplentTrackerModel.Map_Version_client" />
+    <EntitySet Name="Map_Version_Product" EntityType="ClientComplentTrackerModel.Map_Version_Product" />
+    <EntitySet Name="Clients" EntityType="ClientComplentTrackerModel.Client" />
+    <EntitySet Name="ActionStatus" EntityType="ClientComplentTrackerModel.ActionStatu" />
+  </EntityContainer>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Client_Login_Page">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Password" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Full_Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Role" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="EmailID" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="module">
+    <Key>
+      <PropertyRef Name="Moduleid" />
+    </Key>
+    <Property Name="Moduleid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ModuleName" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Severity">
+    <Key>
+      <PropertyRef Name="SeverityID" />
+    </Key>
+    <Property Name="SeverityID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SeverityName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Typ">
+    <Key>
+      <PropertyRef Name="TypeID" />
+    </Key>
+    <Property Name="TypeID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="UserRole">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Role" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TestEnvironment">
+    <Key>
+      <PropertyRef Name="TestEnvironmentID" />
+    </Key>
+    <Property Type="Int32" Name="TestEnvironmentID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="TestEnvironmentName" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsActive" />
+  </EntityType>
+  <EntityType Name="Priority">
+    <Key>
+      <PropertyRef Name="PriorityID" />
+    </Key>
+    <Property Type="Int32" Name="PriorityID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="PriorityName" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Map_ClientName">
+    <Key>
+      <PropertyRef Name="MappingID" />
+    </Key>
+    <Property Type="Int32" Name="MappingID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="UserID" />
+    <Property Type="Int32" Name="ClientName" />
+    <Property Type="Boolean" Name="IsActive" />
+    <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+    <Property Type="Int32" Name="CreatedBy" />
+    <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+    <Property Type="Int32" Name="ModifiedBy" />
+  </EntityType>
+  <EntityType Name="Map_Version_client">
+    <Key>
+      <PropertyRef Name="MVCID" />
+    </Key>
+    <Property Type="Int32" Name="MVCID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="VersionId" />
+    <Property Type="Int32" Name="ClientId" />
+    <Property Type="Boolean" Name="IsActive" />
+    <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+    <Property Type="Decimal" Name="CreatedBy" Precision="18" Scale="0" />
+    <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+    <Property Type="Decimal" Name="ModifiedBy" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="Map_Version_Product">
+    <Key>
+      <PropertyRef Name="MVCID" />
+    </Key>
+    <Property Type="Int32" Name="MVCID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="VersionId" />
+    <Property Type="Int32" Name="ProductId" />
+    <Property Type="Boolean" Name="IsActive" />
+    <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+    <Property Type="Decimal" Name="CreatedBy" Precision="18" Scale="0" />
+    <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+    <Property Type="Decimal" Name="ModifiedBy" Precision="18" Scale="0" />
+    <Property Type="String" Name="ReleaseDate" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="ClientID" />
+    </Key>
+    <Property Type="Int32" Name="ClientID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Clients" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmailID" MaxLength="3000" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsActive" />
+    <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+    <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+    <Property Type="String" Name="CreatedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ModifiedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ActionStatu">
+    <Key>
+      <PropertyRef Name="ActionStatusID" />
+    </Key>
+    <Property Type="Int32" Name="ActionStatusID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Status" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>
